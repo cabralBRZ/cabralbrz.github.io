@@ -1,0 +1,380 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #343a40;
+    margin: 20px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    font-size: 12px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ced4da;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    font-size: 12px;
+    color: #495057;
+}
+
+input[type="text"], 
+select, 
+textarea, 
+input[type="date"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #adb5bd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #495057;
+    transition: border-color 0.3s;
+    font-family: 'Arial', sans-serif;
+}
+
+input[type="text"]:focus, 
+textarea:focus, 
+input[type="date"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+input[type="text"]::placeholder, 
+textarea::placeholder {
+    color: #868e96;
+}
+
+/* Ajusta o layout para os checkboxes e labels ficarem alinhados */
+.checklist-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checklist-header input {
+    margin-right: 8px; /* Espaçamento entre o checkbox e o texto */
+}
+
+.checklist-item {
+    margin-bottom: 20px;
+}
+
+/* Estilo das informações adicionais */
+.additional-info {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+/* Estilo da checklist */
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #495057;
+    border-bottom: 1px solid #837af5;
+    padding-bottom: 5px;
+    font-size: 14px;
+}
+
+.checklist-item {
+    display: flex;
+    flex-direction: column; /* Alterado para coluna */
+    align-items: flex-start; /* Alinhado à esquerda */
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    background-color: #f9f9f9; /* Cor de fundo atualizada */
+    border-radius: 5px;
+    border: 1px solid #e0e0e0; /* Borda atualizada */
+    transition: background-color 0.3s;
+    position: relative;
+    width: 95.5%; /* Largura atualizada */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Sombra adicionada */
+}
+
+.checklist-item:hover {
+    background-color: #e9ecef;
+}
+
+.checklist-item input[type="checkbox"] {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+.checklist-item label {
+    font-size: 14px; /* Tamanho da fonte atualizado */
+    color: #333; /* Cor do texto atualizada */
+    font-weight: normal; /* Peso da fonte atualizado */
+}
+
+.additional-info {
+    display: none;
+    margin-left: 0;
+    margin-top: 10px;
+    width: calc(100% - 20px);
+    padding-left: 22px; /* Adicionando espaçamento à esquerda */
+}
+
+.additional-info input[type="date"], 
+.additional-info textarea {
+    width: 80%; /* Largura atualizada */
+    padding: 8px; /* Padding ajustado */
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    font-size: 14px; /* Tamanho da fonte atualizado */
+}
+
+.additional-info input[type="date"]:focus, 
+.additional-info textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Estilo dos botões */
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: translateY(-5px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.file-label {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.file-label:hover {
+    background-color: #0056b3; /* Cor atualizada */
+    transform: translateY(-5px);
+}
+
+.file-label:active {
+    transform: translateY(0);
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* Estilo para checklist adicional */
+.additional-checklist {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.additional-checklist-item {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    font-size: 1rem;
+    color: #495057;
+}
+
+.additional-checklist-item input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2); /* Aumentando o tamanho do checkbox */
+}
+
+/* Estilos para os campos de data */
+.date-fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px; /* Reduzindo o espaçamento entre as linhas */
+}
+
+.date-fields div {
+    flex: 1;
+}
+
+/* Ajustes para os campos de nome e código do projeto */
+.project-fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px; /* Espaçamento entre o nome do projeto e os outros campos */
+}
+
+/* Ajustes para os campos de solicitante e responsável */
+        .infoList-fields {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+                /* Ajuste para os campos de texto, definindo uma largura maior */
+        .infoList-fields div {
+            flex: 1;
+        }
+
+        .infoList-fields input {
+            width: 100%; /* Faz os inputs ocuparem 100% do espaço disponível */
+            padding: 10px; /* Para dar mais conforto ao digitar */
+            box-sizing: border-box; /* Garante que padding não aumente o tamanho total do input */
+        }
+
+       /* Estilo para a seção de Sustentação e Projeto */
+        .sustentacao-section, .project-section {
+            border: 1px solid #ced4da; /* Borda cinza */
+            background-color: #f9f9f9; /* Fundo cinza claro */
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 10px; /* Bordas arredondadas */
+        }
+
+        /* Estilo para organizar os campos de data um ao lado do outro */
+        .date-fields {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .date-fields div {
+            flex: 1;
+        }
+
+        /* Estilo para organizar os campos de projeto */
+        .project-fields {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Estilo para os campos de informações do projeto */
+        .infoList-fields {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Estilo para o campo de repositório */
+        .input-repo {
+            margin-bottom: 10px;
+        }
+
+        /* Estilo para as ferramentas impactadas */
+        .additional-checklist {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px; /* Espaçamento entre os checkboxes */
+            margin-bottom: 10px;
+        }
+
+        .additional-checklist-item {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .additional-checklist-item input {
+            margin-right: 8px;
+        }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+    }
+
+    .checklist-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .checklist-item input[type="checkbox"] {
+        margin-bottom: 10px;
+    }
+
+    .date-fields {
+        flex-direction: column;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    /* Ajustando o campo de código do projeto */
+    #project-code {
+        width: 100px;
+        margin-left: 10px;
+    }
+
+    .solic-name {
+        width: 100px;
+        margin-left: 10px;
+    }
+
+    /* Ajustando o campo de código do projeto */
+    .solicitante {
+       width: calc(305% - 90px);
+    }
+
+    /* Aumentando a largura do campo de nome do projeto */
+    #nomeProjeto {
+        width: calc(100% - 100px);
+    }
+}

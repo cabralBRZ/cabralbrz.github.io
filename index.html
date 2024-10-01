@@ -1,0 +1,157 @@
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Checklist de Projetos SAS</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="scripts/script.js" defer></script>
+    </head>
+    <body>
+
+    <h1>Checklist de Projetos SAS</h1>
+
+    <form id="projectForm">
+    <!-- Seção de Projeto -->
+    <div class="project-section">
+        <h3>Informações do Projeto:</h3>
+        <div class="project-fields">
+            <div>
+                <label for="nomeProjeto">Nome do Projeto:</label>
+                <input type="text" id="nomeProjeto" name="nomeProjeto" placeholder="Nome do projeto" required style="width: calc(380% - 90px);">
+            </div>
+            <div>
+                <label for="codigoProjeto">Código do Projeto:</label>
+                <input type="text" id="codigoProjeto" name="codigoProjeto" class="project-code" placeholder="Código" required>
+            </div>
+        </div>
+
+        <div class="infoList-fields">
+            <div>
+                <label for="solicitante">Solicitante:</label>
+                <input type="text" id="solicitante" name="solicitante" class="solic-name" placeholder="Nome do solicitante" required>
+            </div>
+            <div>
+                <label for="desenvolvedor">Desenvolvedor SAS:</label>
+                <input type="text" id="desenvolvedor" name="desenvolvedor" class="solic-name" placeholder="Nome do Desenvolvedor" required>
+            </div>
+            <div>
+                <label for="gestaoProjeto">Gestão Projeto SAS:</label>
+                <input type="text" id="gestaoProjeto" name="gestaoProjeto" class="solic-name" placeholder="Responsável gestão do projeto" required>
+            </div>
+        </div>
+
+        <label for="description">Descrição do Projeto:</label>
+        <textarea id="description" name="description" rows="4" placeholder="Descrição do projeto"></textarea>
+
+        <div class="input-repo">
+            <div>
+                <label for="repositorio">Repositório do projeto:</label>
+                <textarea id="urlrepositorio" name="urlrepositorio" rows="2" placeholder="Insira o link completo do repositório do projeto"></textarea>
+            </div>
+        </div>
+
+        <div class="date-fields">
+            <div>
+                <label for="startDate">Data de Início:</label>
+                <input type="date" id="startDate" name="startDate" required>
+            </div>
+            <div>
+                <label for="endDate">Data de Fim:</label>
+                <input type="date" id="endDate" name="endDate" required>
+            </div>
+        </div>
+    </div>
+
+    <h3>Ferramentas Impactadas:</h3>
+    <div class="additional-checklist">
+        <div class="additional-checklist-item">
+            <input type="checkbox" id="sas_rtdm" onchange="toggleAdditionalInfo(this)">
+            <label for="sas_rtdm">SAS RTDM</label>
+        </div>
+        <div class="additional-checklist-item">
+            <input type="checkbox" id="sas_esp" onchange="toggleAdditionalInfo(this)">
+            <label for="sas_esp">SAS ESP</label>
+        </div>
+        <div class="additional-checklist-item">
+            <input type="checkbox" id="sas_guide" onchange="toggleAdditionalInfo(this)">
+            <label for="sas_guide">SAS GUIDE</label>
+        </div>
+        <div class="additional-checklist-item">
+            <input type="checkbox" id="sas_di" onchange="toggleAdditionalInfo(this)">
+            <label for="sas_di">SAS DI</label>
+        </div>
+    </div>
+
+<h3 class="checklist-title">Checklist de Execução:</h3>
+
+<div class="checklist-item">
+    <div class="checklist-header">
+        <input type="checkbox" id="item1" class="checklist" data-info="info1" onchange="toggleAdditionalInfo(this)">
+        <label for="item1"><b>Phaseout OPS</b></label>
+    </div>
+    <div class="additional-info" id="info1" style="display: none;">
+        <div class="input-group">
+            <label for="item1DateDetails">Data phaseout OPS:</label>
+            <input type="date" id="item1DateDetails">
+        </div>
+        <div class="input-group">
+            <label for="descriptionOPS">Título e-mail phaseout OPS:</label>
+            <textarea id="descriptionOPS" name="descriptionOPS" rows="3" placeholder="Insira o título do e-mail de phaseout OPS"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="checklist-item">
+    <div class="checklist-header">
+        <input type="checkbox" id="item2" class="checklist" data-info="info2" onchange="toggleAdditionalInfo(this)">
+        <label for="item2"><b>Phaseout PCP</b></label>
+    </div>
+    <div class="additional-info" id="info2" style="display: none;">
+        <div class="input-group">
+            <label for="item2DateDetails">Data phaseout PCP:</label>
+            <input type="date" id="item2DateDetails">
+        </div>
+        <div class="input-group">
+            <label for="descriptionPCP">Título e-mail phaseout PCP:</label>
+            <textarea id="descriptionPCP" name="descriptionPCP" rows="3" placeholder="Insira o título do e-mail de phaseout PCP"></textarea>
+        </div>
+    </div>
+</div>
+
+    <!-- Nova seção Sustentação -->
+ <div class="sustentacao-section">
+        <h3>Sustentação</h3>
+        <div class="date-fields">
+            <div>
+                <label for="deployproducao">Deploy produção:</label>
+                <input type="date" id="deployproducao" name="deployproducao">
+            </div>
+            <div>
+                <label for="sustentacaoProjeto">Sustentação Projetos:</label>
+                <input type="date" id="sustentacaoProjeto" name="sustentacaoProjeto">
+            </div>
+            <div>
+                <label for="sustentacaoOPS">Sustentação OPS:</label>
+                <input type="date" id="sustentacaoOPS" name="sustentacaoOPS">
+            </div>
+        </div>
+        <div>
+            <label for="assuntoEmail">Assunto do E-mail:</label>
+            <textarea id="assuntoEmail" name="assuntoEmail" rows="3" placeholder="Insira o assunto do e-mail"></textarea>
+        </div>
+    </div>
+
+
+        <div class="buttons">
+            <label for="fileUpload" class="file-label">
+                <i class="fas fa-file-import"></i>&nbsp; <b>Importar Dados</b>
+            </label>
+            <input type="file" id="fileUpload" accept=".json" onchange="importData(event)">
+            <button type="button" onclick="saveData()">
+                <i class="fas fa-save"></i>&nbsp; <b>Salvar Dados</b>
+            </button>
+        </div>
+    </form>
+    </body>
+    </html>
