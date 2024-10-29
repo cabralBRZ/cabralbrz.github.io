@@ -81,8 +81,8 @@
             // Gera o nome do arquivo com o nome do projeto, código e a data de hoje
         const fileName = prompt(
         "Nome do arquivo json (sem extensão):", 
-        `${projectData.codigoProjeto.replace(/\s+/g, '_')}_${projectData.nomeProjeto.replace(/\s+/g, '_')}_${getCurrentDate()}`
-    ) || `${projectData.codigoProjeto.replace(/\s+/g, '_')}_${projectData.nomeProjeto.replace(/\s+/g, '_')}_${getCurrentDate()}`;
+        `${(projectData.codigoProjeto || 'cod:0000').replace(/\s+/g, '_')}_${projectData.nomeProjeto.replace(/\s+/g, '_')}_${getCurrentDate()}`
+    ) || `${(projectData.codigoProjeto || 'cod:0000').replace(/\s+/g, '_')}_${projectData.nomeProjeto.replace(/\s+/g, '_')}_${getCurrentDate()}`;
 
             const blob = new Blob([projectDataJSON], { type: 'application/json' });
             const url = URL.createObjectURL(blob);
